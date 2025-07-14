@@ -443,7 +443,7 @@ GameObject:
   - component: {fileID: 501792720}
   - component: {fileID: 501792719}
   m_Layer: 0
-  m_Name: Quad
+  m_Name: BackGround_Quad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -462,7 +462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.01
-  acceleration: 0.0001
+  acceleration: 0.005
   maxSpeed: 1
 --- !u!64 &501792720
 MeshCollider:
