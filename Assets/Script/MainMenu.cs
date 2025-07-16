@@ -14,13 +14,13 @@ public class MainMenu : MonoBehaviour
         
     }
 
-    public void OnClickGameStart()
+    public void OnClickGameStart() // Start 버튼 클릭 시 호출되는 함수
     {
         // Load the game scene
-        UnityEngine.SceneManagement.SceneManager.LoadScene("GameStart");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("GameMain"); // 게임 시작화면에서 게임 메인 화면으로
     }
 
-    public void OnClickExit()
+    public void OnClickExit() // Exit 버튼 클릭 시 호출되는 함수
     {
         // Exit the application
         Application.Quit();
