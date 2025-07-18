@@ -10,6 +10,11 @@ public class BackGround_Move : MonoBehaviour
 
     private float offsetX = 0f;
 
+    public static float CurrentSpeed 
+    { 
+        get; private set; 
+    }  //  현재 속도 외부 접근용
+
     void Start()
     {
         meshRenderer = GetComponent<MeshRenderer>();
@@ -22,5 +27,7 @@ public class BackGround_Move : MonoBehaviour
         speed += acceleration * Time.deltaTime; // 매 프레임 속도 증가
         offsetX += speed * Time.deltaTime;      // 이동 거리 계산
         meshRenderer.material.mainTextureOffset = new Vector2(offsetX, 0);
+
+        CurrentSpeed = speed; //  현재 속도 저장
     }
 }
