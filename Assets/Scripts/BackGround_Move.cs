@@ -4,7 +4,7 @@ public class BackGround_Move : MonoBehaviour
 {
     private MeshRenderer meshRenderer;
 
-    public float speed;        // 초기 속도
+    public float speed = 0.01f;        // 초기 속도
     public float acceleration = 0.01f; // 시간당 증가 속도
     public float maxSpeed = 1.0f;      // 최대 속도 제한
 

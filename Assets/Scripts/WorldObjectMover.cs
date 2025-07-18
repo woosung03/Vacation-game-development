@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class WorldObjectMover : MonoBehaviour
 {
-    public float speedMultiplier = 1.0f;  // 속도 비율 조정
+    public float speedMultiplier = 100.0f;  // 속도 비율 조정
     void Start()
     {
         

@@ -4,7 +4,7 @@ public class CoinSpawner : MonoBehaviour
 {
     public float startInterval = 5.0f;     // 시작 시 5초에 1개
     public float minInterval = 1.5f;       // 아무리 빨라도 1.5초 간격
-    public float acceleration = 0.01f;     // 줄어드는 속도를 매우 낮게
+    public float acceleration = 0.005f;     // 줄어드는 속도를 매우 낮게
 
 
     private float currentInterval;
@@ -19,9 +19,8 @@ public class CoinSpawner : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        // 배경 속도 기준으로 간격 계산
-        float currentSpeed = BackGround_Move.CurrentSpeed;
-        float currentInterval = Mathf.Max(minInterval, startInterval - currentSpeed * 3f);
+        // 배경 속도에 따라 코인 생성 간격 조절
+        float currentInterval = Mathf.Max(minInterval, startInterval - BackGround_Move.CurrentSpeed * 3f);
 
         if (timer >= currentInterval)
         {
