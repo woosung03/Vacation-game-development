@@ -5,7 +5,7 @@ public class CoinManager : MonoBehaviour
     public static CoinManager Instance; // 싱글톤 인스턴스
     public int totalCoins = 0;  // 플래이어 지갑 코인 수
 
-    private void Awake()    
+    private void Awake()
     {
         if (Instance == null) // 싱글톤 패턴 구현
         {
@@ -15,23 +15,24 @@ public class CoinManager : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);    
+            Destroy(gameObject);
         }
     }
 
+
     public void AddCoins(int amount)
     {
-        totalCoins += amount;
+        totalCoins += amount;   // 코인 추가
         SaveCoins();
     }
 
-    void SaveCoins()
+    void SaveCoins()    // 코인 저장
     {
         PlayerPrefs.SetInt("TotalCoins", totalCoins);
         PlayerPrefs.Save();
     }
 
-    void LoadCoins()
+    void LoadCoins()    // 코인 로드
     {
         totalCoins = PlayerPrefs.GetInt("TotalCoins", 0);
     }
