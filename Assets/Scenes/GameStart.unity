@@ -651,7 +651,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 664, y: 374}
+  m_SizeDelta: {x: 718, y: 404}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &561777043
 MonoBehaviour:
@@ -784,7 +784,7 @@ GameObject:
   - component: {fileID: 1075165096}
   - component: {fileID: 1075165100}
   m_Layer: 5
-  m_Name: GameMainCanvas
+  m_Name: GameStartCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
