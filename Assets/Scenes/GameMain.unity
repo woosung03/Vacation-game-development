@@ -742,7 +742,7 @@ MonoBehaviour:
   obstacleGroups:
   - {fileID: 8211739147874437965, guid: 516c63d1868614146af0d6c803f0e836, type: 3}
   - {fileID: 8211739147874437965, guid: c7a065151d5ce1e4f94d9a15f6812a18, type: 3}
-  - {fileID: 8211739147874437965, guid: 516c63d1868614146af0d6c803f0e836, type: 3}
+  - {fileID: 8211739147874437965, guid: 089366e074b0a59408e8da521bbd02fd, type: 3}
   spawnPoint: {fileID: 5851643240301290792, guid: a725a173a72c99a459bf86cad9e429a1, type: 3}
   spawnInterval: 10
 --- !u!114 &767656092
@@ -965,7 +965,7 @@ Transform:
   m_GameObject: {fileID: 927144396}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -5, z: 1}
+  m_LocalPosition: {x: 0, y: -4.82, z: 1}
   m_LocalScale: {x: 20, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
