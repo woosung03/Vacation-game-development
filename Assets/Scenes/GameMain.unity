@@ -758,6 +758,7 @@ MonoBehaviour:
   - {fileID: 8211739147874437965, guid: 089366e074b0a59408e8da521bbd02fd, type: 3}
   spawnPoint: {fileID: 5851643240301290792, guid: a725a173a72c99a459bf86cad9e429a1, type: 3}
   spawnInterval: 10
+  worldObjectsParent: {fileID: 0}
 --- !u!1 &770924981
 GameObject:
   m_ObjectHideFlags: 0
@@ -1215,6 +1216,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1704685788}
+  - component: {fileID: 1704685789}
   m_Layer: 0
   m_Name: WorldObjects
   m_TagString: Untagged
@@ -1237,6 +1239,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1704685789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704685785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cacf197706076a74583b72deaf25e705, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1954924615 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5162346272986456366, guid: ff374ed600b27ec48a36ec44249cc899, type: 3}

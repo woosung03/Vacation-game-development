@@ -319,7 +319,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5684598283002376942}
-  - component: {fileID: 3163183493257451618}
+  - component: {fileID: 8185819274123640816}
   m_Layer: 0
   m_Name: ObstacleGroup
   m_TagString: Untagged
@@ -343,7 +343,7 @@ Transform:
   - {fileID: 7557251876762069948}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3163183493257451618
+--- !u!114 &8185819274123640816
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
