@@ -2,9 +2,9 @@ using UnityEngine;
 
 public static class WorldSpeedManager   //  전역 속도관리
 {
-    public static float CurrentSpeed   { get; private set; } = 3.0f;
+    public static float CurrentSpeed   { get; private set; } = 5.0f;    //  현재 속도
 
-    private static float maxSpeed = 10.0f;
+    private static float maxSpeed = 10.0f;  // 최대 속도
     private static float acceleration = 0.2f; // 초당 증가량
 
     public static void UpdateSpeed(float deltaTime)

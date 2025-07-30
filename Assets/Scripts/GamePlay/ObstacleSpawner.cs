@@ -3,12 +3,11 @@ using UnityEngine;
 public class ObstacleSpawner : MonoBehaviour    //장애물 생성자
 {
     public GameObject[] obstacleGroups; // ObstacleGroup1~N 프리팹
-    public float spawnInterval = 12f;    // 장애물 프리펩 생성 간격
     public Transform spawnPoint;            // 스폰 위치 (고정 오브젝트)
 
     void Start()
     {
-        InvokeRepeating(nameof(SpawnObstacleGroup), 1f, spawnInterval);     // 1초 후부터 spawnInterval 간격으로 장애물 그룹 생성
+        SpawnObstacleGroup();
     }
 
 
@@ -26,6 +25,19 @@ public class ObstacleSpawner : MonoBehaviour    //장애물 생성자
         {
             group.transform.GetChild(i).gameObject.SetActive(i == patternIndex);
         }
+
+        // 장애물 이동 컴포넌트에서 spawner 연결
+        var mover = group.GetComponent<WorldObjectMover>();
+        if (mover != null)
+        {
+            mover.spawner = this;
+        }
+    }
+
+    // 장애물에서 호출되는 콜백
+    public void NotifyObstacleCleared()
+    {
+        SpawnObstacleGroup();
     }
 
 }
