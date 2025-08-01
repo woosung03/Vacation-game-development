@@ -39,14 +39,4 @@ public class CoinClass : MonoBehaviour  // 코인 클레스 관리 스크립트
         coinClass.Add(newCoin); //  클래스 리스트에 추가
         return newCoin; 
     }
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

@@ -7,7 +7,7 @@ public class CoinManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null) // 싱글톤 패턴 구현
+        if (Instance == null) 
         {
             Instance = this;    // 인스턴스 할당
             DontDestroyOnLoad(gameObject); // 씬 전환 시 파괴되지 않도록 설정

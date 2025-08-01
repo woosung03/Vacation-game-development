@@ -19,5 +19,15 @@ public class PlayerCoinCollector : MonoBehaviour    // 플레이어 코인 수집기
 
             collision.gameObject.SetActive(false);      // 디스트로이 대신 비활성화
         }
+        else if (collision.CompareTag("ScoreItem"))
+        {
+            int bonusScore = 50; // 점수 오브젝트 
+
+            if (sessionUI != null)
+            {
+                sessionUI.AddScore(bonusScore); // 세션 UI 점수 업데이트
+            }
+            collision.gameObject.SetActive(false);  // 디스트로이 대신 비활성화
+        }
     }
 }
