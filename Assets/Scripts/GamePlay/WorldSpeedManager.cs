@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public static class WorldSpeedManager   //  傈开 加档包府
+public static class WorldSpeedManager   // 傈开 加档 包府 努贰胶
 {
     public static float CurrentSpeed   { get; private set; } = 5.0f;    //  泅犁 加档
 
