@@ -7,13 +7,23 @@ public class CoinManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null) 
+        if (Instance == null)
         {
             Instance = this;    // 인스턴스 할당
             DontDestroyOnLoad(gameObject); // 씬 전환 시 파괴되지 않도록 설정
             LoadCoins();    // 코인 데이터 로드
         }
         else
+        {
+            Destroy(gameObject);
+        }
+
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (Instance != this)
         {
             Destroy(gameObject);
         }

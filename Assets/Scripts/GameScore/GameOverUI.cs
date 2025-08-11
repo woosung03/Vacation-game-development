@@ -4,6 +4,21 @@ using UnityEngine.SceneManagement;
 using TMPro;
 public class GameOverUI : MonoBehaviour
 {
+    public static GameOverUI Instance;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     public TMP_Text scoreText;    
     public TMP_Text coinText;
     public GameObject gameOverPanel; // UI 패널 (초기엔 비활성)

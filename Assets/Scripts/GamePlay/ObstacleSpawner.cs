@@ -5,6 +5,21 @@ public class ObstacleSpawner : MonoBehaviour    //장애물 생성자
     public GameObject[] obstacleGroups; // ObstacleGroup1~N 프리팹
     public Transform spawnPoint;            // 스폰 위치 (고정 오브젝트)
 
+    public static ObstacleSpawner Instance;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     void Start()
     {
         SpawnObstacleGroup();

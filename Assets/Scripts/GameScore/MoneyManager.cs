@@ -12,4 +12,19 @@ public class MoneyManager : MonoBehaviour   // 돈 관리 클래스 //아직 사용하지 않
     {
         money += amount; // 돈을 추가  
     }
+
+    public static MoneyManager Instance;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+        }
+    }
 }
