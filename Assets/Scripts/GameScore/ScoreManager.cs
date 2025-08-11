@@ -2,11 +2,12 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    public static ScoreManager Instance; 
+    public static ScoreManager Instance;
 
-    public int totalScore = 0;     // 누적 점수 
-    public int currentScore = 0;   // 이번 게임 점수
-    public int highScore = 0;      // 최고 점수  
+    public int CurrentScore { get; private set; }
+    public int CurrentCoins { get; private set; }
+    public int HighScore { get; private set; }
+    public int TotalCoins { get; private set; }
 
     private void Awake()
     {
@@ -14,7 +15,7 @@ public class ScoreManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            LoadScore();    // 총 점수와 최고 점수 불러오기
+            LoadData();
         }
         else
         {
@@ -22,39 +23,37 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
-    public void AddCurrentScore(int amount)
+    public void AddScore(int amount)
     {
-        currentScore += amount;
-
-        // 최고 점수 갱신
-        if (currentScore > highScore)   // 최고 점수보다 현재 점수가 높을 때
+        CurrentScore += amount;
+        if (CurrentScore > HighScore)
         {
-            highScore = currentScore;
-            SaveScore(); // 하이스코어도 저장
+            HighScore = CurrentScore;
         }
     }
 
-    public void AddTotalScore(int amount)
+    public void AddCoins(int amount)
     {
-        totalScore += amount;
-        SaveScore();
+        CurrentCoins += amount;
+        TotalCoins += amount;
     }
 
-    public void ResetCurrentScore()
+    public void ResetSession()
     {
-        currentScore = 0;
+        CurrentScore = 0;
+        CurrentCoins = 0;
     }
 
-    void SaveScore()
+    public void SaveData()
     {
-        PlayerPrefs.SetInt("TotalScore", totalScore);
-        PlayerPrefs.SetInt("HighScore", highScore);
+        PlayerPrefs.SetInt("HighScore", HighScore);
+        PlayerPrefs.SetInt("TotalCoins", TotalCoins);
         PlayerPrefs.Save();
     }
 
-    void LoadScore()
+    private void LoadData()
     {
-        totalScore = PlayerPrefs.GetInt("TotalScore", 0);
-        highScore = PlayerPrefs.GetInt("HighScore", 0);
+        HighScore = PlayerPrefs.GetInt("HighScore", 0);
+        TotalCoins = PlayerPrefs.GetInt("TotalCoins", 0);
     }
 }

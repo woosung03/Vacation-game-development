@@ -13,11 +13,19 @@ public class PlayerHP : MonoBehaviour
     private int currentHP;          // 현재 체력
     private Coroutine hpRoutine;    // 체력바 감소 루틴
 
+    private GameOverUI gameOverUI;  // 게임오버 UI 참조
+
     private void Start()
     {
-        currentHP = maxHP;
-        hpBar.maxValue = maxHP;
-        hpBar.value = currentHP;
+        currentHP = maxHP;          // 초기 체력 설정
+        hpBar.maxValue = maxHP;     // 최대 체력 설정
+        hpBar.value = currentHP;    // 현재 체력 설정
+
+        gameOverUI = FindObjectOfType<GameOverUI>();
+        if (gameOverUI == null)
+        {
+            Debug.LogError("GameOverUI를 찾을 수 없습니다!");
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -34,9 +42,23 @@ public class PlayerHP : MonoBehaviour
         currentHP = Mathf.Clamp(currentHP, 0, maxHP); // 체력 0 이하로 떨어지지 않도록 제한
         hpBar.value = currentHP;    // 체력바 업데이트
 
-        if (currentHP <= 0) // 현재 체력이 0이 되면 게임 레디 씬으로 넘어가기
+        if (currentHP <= 0) // 현재 체력이 0이 되면 다이함수
         {
-            SceneManager.LoadScene("GameReady");
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        Debug.Log("플레이어 체력 0, Die() 호출됨");
+        if (gameOverUI != null)
+        {
+            gameOverUI.ShowGameOver();  // 매개변수 없는 오버로드 호출
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            Debug.LogError("gameOverUI가 null입니다.");
         }
     }
 
