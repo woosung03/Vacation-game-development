@@ -9,6 +9,7 @@ public class PlayerHP : MonoBehaviour
     public int maxHP = 100;         // 최대 체력
     public int damageOnHit = 10;    // 충돌 시 받는 피해
     public float hpLerpSpeed = 5f;  // 체력바 감소 속도
+    public int HP_Potion = 30; // 체력 포션
 
     private int currentHP;          // 현재 체력
     private Coroutine hpRoutine;    // 체력바 감소 루틴
@@ -34,6 +35,11 @@ public class PlayerHP : MonoBehaviour
         {
             TakeDamage(damageOnHit);
         }
+
+        if(collision.CompareTag("HP_Potion")) // 체력 포션과 충돌 시
+        {
+            TakeHP_Potion(HP_Potion);
+        }
     }
 
     void TakeDamage(int damage)
@@ -46,6 +52,13 @@ public class PlayerHP : MonoBehaviour
         {
             Die();
         }
+    }
+
+    void TakeHP_Potion(int hp)
+    {
+        currentHP += hp; // 체력 포션으로 체력 증가
+        currentHP = Mathf.Clamp(currentHP, 0, maxHP); // 최대 체력 초과하지 않도록 제한
+        hpBar.value = currentHP; // 체력바 업데이트
     }
 
     void Die()
