@@ -4,6 +4,11 @@ public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager Instance;
 
+    public int CurrentScore { get; private set; }
+    public int CurrentCoins { get; private set; }
+    public int HighScore { get; private set; }
+    public int TotalCoins { get; private set; }
+
     private void Awake()
     {
         if (Instance == null)
@@ -14,16 +19,9 @@ public class ScoreManager : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
+            Destroy(gameObject);    //  중복 인스턴스 제거
         }
     }
-
-    public int CurrentScore { get; private set; }
-    public int CurrentCoins { get; private set; }
-    public int HighScore { get; private set; }
-    public int TotalCoins { get; private set; }
-
-    
 
     public void AddScore(int amount)
     {

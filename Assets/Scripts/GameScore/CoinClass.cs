@@ -20,16 +20,6 @@ public class CoinClass : MonoBehaviour  // 코인 클레스 관리 스크립트
             coin.SetActive(false);  // 비활성화 상태로 설정
             coinClass.Add(coin);    // 클래스 리스트에 추가
         }
-
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else if (Instance != this)
-        {
-            Destroy(gameObject);
-        }
     }
 
     public GameObject GetCoin() // 코인 가져오기 메소드

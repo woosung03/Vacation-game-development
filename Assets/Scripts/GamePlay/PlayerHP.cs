@@ -63,7 +63,7 @@ public class PlayerHP : MonoBehaviour
 
     void Die()
     {
-        Debug.Log("플레이어 체력 0, Die() 호출됨");
+        Debug.Log("플레이어 체력 0, Die() 호출됨"); // 뭐가 문제야
         if (gameOverUI != null)
         {
             gameOverUI.ShowGameOver();  // 매개변수 없는 오버로드 호출

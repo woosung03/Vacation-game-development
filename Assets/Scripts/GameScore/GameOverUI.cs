@@ -4,23 +4,8 @@ using UnityEngine.SceneManagement;
 using TMPro;
 public class GameOverUI : MonoBehaviour
 {
-    public static GameOverUI Instance;
-
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else if (Instance != this)
-        {
-            Destroy(gameObject);
-        }
-    }
-
-    public TMP_Text scoreText;    
-    public TMP_Text coinText;
+    public TMP_Text scoreText;      //  (점수 표시용)
+    public TMP_Text coinText;       //  (코인 표시용)
     public GameObject gameOverPanel; // UI 패널 (초기엔 비활성)
 
     private void Start()
@@ -44,7 +29,7 @@ public class GameOverUI : MonoBehaviour
         ScoreManager.Instance.SaveData();
     }
 
-    public void OnClickRestart()
+    public void OnBack()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("GameReady");
