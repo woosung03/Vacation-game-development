@@ -22,7 +22,7 @@ public class GameReadyMenu : MonoBehaviour
 
     public void OnClickScore()
     {
-        // 씬 이동 대신 패널 전환
+        // 패널 전환
         mainPanel.SetActive(false);
         scorePanel.SetActive(true);
 

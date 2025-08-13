@@ -2058,7 +2058,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 316190912460634384, guid: 6e56c89a829e6664d8ca5910afabbecc, type: 3}
       propertyPath: m_Name
-      value: GameManager
+      value: MainManager
       objectReference: {fileID: 0}
     - target: {fileID: 4182730111030276075, guid: 6e56c89a829e6664d8ca5910afabbecc, type: 3}
       propertyPath: coinText
@@ -2069,6 +2069,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1524326345}
     - target: {fileID: 4182730111030276075, guid: 6e56c89a829e6664d8ca5910afabbecc, type: 3}
+      propertyPath: gameOverPanel
+      value: 
+      objectReference: {fileID: 692089559}
+    - target: {fileID: 5700019046791946890, guid: 6e56c89a829e6664d8ca5910afabbecc, type: 3}
+      propertyPath: coinText
+      value: 
+      objectReference: {fileID: 634346933}
+    - target: {fileID: 5700019046791946890, guid: 6e56c89a829e6664d8ca5910afabbecc, type: 3}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 1524326345}
+    - target: {fileID: 5700019046791946890, guid: 6e56c89a829e6664d8ca5910afabbecc, type: 3}
       propertyPath: gameOverPanel
       value: 
       objectReference: {fileID: 692089559}
@@ -2113,34 +2125,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 4182730111030276075, guid: 6e56c89a829e6664d8ca5910afabbecc, type: 3}
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 316190912460634384, guid: 6e56c89a829e6664d8ca5910afabbecc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2111321339}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e56c89a829e6664d8ca5910afabbecc, type: 3}
---- !u!1 &2111321338 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 316190912460634384, guid: 6e56c89a829e6664d8ca5910afabbecc, type: 3}
+--- !u!114 &2111321339 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5700019046791946890, guid: 6e56c89a829e6664d8ca5910afabbecc, type: 3}
   m_PrefabInstance: {fileID: 2111321337}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2111321339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2111321338}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a3798457feecf5489abae81370cce87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 1524326345}
-  coinText: {fileID: 634346933}
-  gameOverPanel: {fileID: 692089559}
 --- !u!1001 &2562815590642202077
 PrefabInstance:
   m_ObjectHideFlags: 0
