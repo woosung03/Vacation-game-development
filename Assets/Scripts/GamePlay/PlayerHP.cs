@@ -18,18 +18,19 @@ public class PlayerHP : MonoBehaviour
 
     private void Start()
     {
+        maxHP = 100 + (UpgradeManager.Instance.healthLevel - 1) * 20; // 레벨당 20씩 증가
         currentHP = maxHP;          // 초기 체력 설정
         hpBar.maxValue = maxHP;     // 최대 체력 설정
         hpBar.value = currentHP;    // 현재 체력 설정
 
-        gameOverUI = FindObjectOfType<GameOverUI>();
+        gameOverUI = FindObjectOfType<GameOverUI>();    //  게임오버 UI 찾기 버그 확인용
         if (gameOverUI == null)
         {
             Debug.LogError("GameOverUI를 찾을 수 없습니다!");
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision) 
     {
         if (collision.CompareTag("Obstacle"))   // 장애물과 충돌 시
         {

@@ -2084,6 +2084,14 @@ PrefabInstance:
       propertyPath: gameOverPanel
       value: 
       objectReference: {fileID: 692089559}
+    - target: {fileID: 6002547099125917713, guid: 6e56c89a829e6664d8ca5910afabbecc, type: 3}
+      propertyPath: obstacleGroups.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6002547099125917713, guid: 6e56c89a829e6664d8ca5910afabbecc, type: 3}
+      propertyPath: 'obstacleGroups.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8211739147874437965, guid: 0d861e9198caf884588c97e26b529d20, type: 3}
     - target: {fileID: 6420237012781484976, guid: 6e56c89a829e6664d8ca5910afabbecc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
