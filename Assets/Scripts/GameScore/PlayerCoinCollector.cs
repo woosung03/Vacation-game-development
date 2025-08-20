@@ -13,13 +13,11 @@ public class PlayerCoinCollector : MonoBehaviour    // 플레이어 코인 수집기
             int finalCoin = coinValue + bonus;
 
             CoinManager.Instance.AddCoins(finalCoin);   // 상점용 코인 증가
-
-            if (sessionUI != null)
-            {
-                ScoreManager.Instance.AddCoins(finalCoin);         // UI용 코인 증가
-                ScoreManager.Instance.AddScore(finalCoin * 10);    // 점수 증가
-                collision.gameObject.SetActive(false);
-            }
+                   
+            ScoreManager.Instance.AddCoins(finalCoin);         // UI용 코인 증가
+            ScoreManager.Instance.AddScore(finalCoin * 10);    // 점수 증가
+            collision.gameObject.SetActive(false);
+            
         }
         else if (collision.CompareTag("ScoreItem"))
         {

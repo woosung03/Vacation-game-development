@@ -1,6 +1,4 @@
-using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 
 public class UpgradeManager : MonoBehaviour
@@ -25,41 +23,46 @@ public class UpgradeManager : MonoBehaviour
         }
     }
 
-    public void OnClickHealth()
+    public bool UpgradeHealth()
     {
-        int cost = healthLevel * 50; // 레벨별 가격
+        int cost = healthLevel * 50;
         if (CoinManager.Instance.totalCoins >= cost)
         {
-            CoinManager.Instance.AddCoins(-cost); // 코인 차감
+            CoinManager.Instance.SpendCoins(cost);
             healthLevel++;
             SaveUpgrades();
+            return true;
         }
+        return false;
     }
 
-    public void OnClickCoin()
+    public bool UpgradeCoin()
     {
         int cost = coinLevel * 50;
         if (CoinManager.Instance.totalCoins >= cost)
         {
-            CoinManager.Instance.AddCoins(-cost);
+            CoinManager.Instance.SpendCoins(cost);
             coinLevel++;
             SaveUpgrades();
+            return true;
         }
+        return false;
     }
 
-    public void OnClickScore()
+    public bool UpgradeScore()
     {
         int cost = scoreLevel * 50;
         if (CoinManager.Instance.totalCoins >= cost)
         {
-            CoinManager.Instance.AddCoins(-cost);
+            CoinManager.Instance.SpendCoins(cost);
             scoreLevel++;
             SaveUpgrades();
+            return true;
         }
+        return false;
     }
 
-
-    void SaveUpgrades()
+    private void SaveUpgrades()
     {
         PlayerPrefs.SetInt("HealthLevel", healthLevel);
         PlayerPrefs.SetInt("CoinLevel", coinLevel);
@@ -67,15 +70,10 @@ public class UpgradeManager : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-    void LoadUpgrades()
+    private void LoadUpgrades()
     {
         healthLevel = PlayerPrefs.GetInt("HealthLevel", 1);
         coinLevel = PlayerPrefs.GetInt("CoinLevel", 1);
         scoreLevel = PlayerPrefs.GetInt("ScoreLevel", 1);
-    }
-
-    public void OnClickBackButton()
-    {
-        SceneManager.LoadScene("GameReady");
     }
 }

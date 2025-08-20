@@ -202,7 +202,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1068685969}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UpgradeManager, Assembly-CSharp
         m_MethodName: OnClickCoin
         m_Mode: 1
@@ -818,7 +818,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1068685969}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UpgradeManager, Assembly-CSharp
         m_MethodName: OnClickScore
         m_Mode: 1
@@ -951,7 +951,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1068685969}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UpgradeManager, Assembly-CSharp
         m_MethodName: OnClickBackButton
         m_Mode: 1
@@ -1001,53 +1001,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 976903500}
   m_CullTransparentMesh: 1
---- !u!1 &1068685968
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1068685970}
-  - component: {fileID: 1068685969}
-  m_Layer: 0
-  m_Name: ShopManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1068685969
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1068685968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b91178ac5305994ba18b6841eccc81d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthLevel: 1
-  coinLevel: 1
-  scoreLevel: 1
---- !u!4 &1068685970
+--- !u!4 &1068685970 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 72659501223860606, guid: a4cbcdf46a5302c4dbb6c4852e0271d2, type: 3}
+  m_PrefabInstance: {fileID: 6273527102733539496}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1068685968}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -91.26561, y: -136.75874, z: -5.5489464}
-  m_LocalScale: {x: 0.9975062, y: 0.9975062, z: 0.9975062}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1331169782}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1211858153
 GameObject:
   m_ObjectHideFlags: 0
@@ -1318,7 +1276,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1068685969}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UpgradeManager, Assembly-CSharp
         m_MethodName: OnClickHealth
         m_Mode: 1
@@ -1732,6 +1690,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2113727108}
   m_CullTransparentMesh: 1
+--- !u!1001 &6273527102733539496
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1331169782}
+    m_Modifications:
+    - target: {fileID: 72659501223860606, guid: a4cbcdf46a5302c4dbb6c4852e0271d2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -91.26561
+      objectReference: {fileID: 0}
+    - target: {fileID: 72659501223860606, guid: a4cbcdf46a5302c4dbb6c4852e0271d2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -136.75874
+      objectReference: {fileID: 0}
+    - target: {fileID: 72659501223860606, guid: a4cbcdf46a5302c4dbb6c4852e0271d2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.5489464
+      objectReference: {fileID: 0}
+    - target: {fileID: 72659501223860606, guid: a4cbcdf46a5302c4dbb6c4852e0271d2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 72659501223860606, guid: a4cbcdf46a5302c4dbb6c4852e0271d2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 72659501223860606, guid: a4cbcdf46a5302c4dbb6c4852e0271d2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 72659501223860606, guid: a4cbcdf46a5302c4dbb6c4852e0271d2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 72659501223860606, guid: a4cbcdf46a5302c4dbb6c4852e0271d2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 72659501223860606, guid: a4cbcdf46a5302c4dbb6c4852e0271d2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 72659501223860606, guid: a4cbcdf46a5302c4dbb6c4852e0271d2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6944706276472923991, guid: a4cbcdf46a5302c4dbb6c4852e0271d2, type: 3}
+      propertyPath: m_Name
+      value: ShopManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a4cbcdf46a5302c4dbb6c4852e0271d2, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

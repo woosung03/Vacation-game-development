@@ -8,10 +8,13 @@ public class GameReadyMenu : MonoBehaviour
     public GameObject scorePanel;
     public TMP_Text highScoreText;
 
+    
     // '게임 시작' 버튼 클릭 시 호출
     public void OnClickPlay()
     {
+        ScoreManager.Instance.ResetSession();   // 이전 게임 점수 및 코인 초기화
         SceneManager.LoadScene("GameMain");
+        
     }
 
     // '상점' 버튼 클릭 시 호출

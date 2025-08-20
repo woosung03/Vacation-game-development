@@ -25,7 +25,11 @@ public class CoinManager : MonoBehaviour
         totalCoins += amount;   // 코인 추가
         SaveCoins();
     }
-
+    public void SpendCoins(int amount)  // 코인 사용
+    {
+        totalCoins = Mathf.Max(0, totalCoins - amount);
+        SaveCoins();
+    }
     void SaveCoins()    // 코인 저장
     {
         PlayerPrefs.SetInt("TotalCoins", totalCoins);

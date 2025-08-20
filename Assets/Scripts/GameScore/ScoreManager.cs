@@ -56,4 +56,9 @@ public class ScoreManager : MonoBehaviour
         HighScore = PlayerPrefs.GetInt("HighScore", 0);
         TotalCoins = PlayerPrefs.GetInt("TotalCoins", 0);
     }
+
+    public void ResetScore()
+    {
+        CurrentScore = 0;
+    }
 }
