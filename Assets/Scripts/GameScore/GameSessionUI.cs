@@ -1,9 +1,9 @@
 using TMPro;
 using UnityEngine;
 
-public class GameSessionUI : MonoBehaviour
+public class GameSessionUI : MonoBehaviour  // 인게임 UI 관리 스크립트
 {
-    public TMP_Text scoreText;
+    public TMP_Text scoreText;  
     public TMP_Text coinText;
 
     void Update()
