@@ -12,13 +12,9 @@ public class WorldObjectMover : MonoBehaviour   // 모든 오브젝트 움직임
 
         transform.Translate(Vector3.left * moveSpeed * Time.deltaTime); // 왼쪽으로 이동
 
-        if (transform.position.x < -20f)
+        if (transform.position.x < -30f)
         {
-            gameObject.SetActive(false); // 파괴 대신 비활성화
-            if (spawner != null)
-            {
-                spawner.NotifyObstacleCleared();  // 다음 장애물 요청
-            }
+            gameObject.SetActive(false); // 파괴 대신 비활성화          
         }
     }
 }
