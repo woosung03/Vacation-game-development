@@ -1,4 +1,4 @@
-# Vacation Game Development
+# DOZI Game Development
 
 ## 프로젝트 소개
 
